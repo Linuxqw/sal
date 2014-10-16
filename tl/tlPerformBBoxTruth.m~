@@ -1,0 +1,9 @@
+function isTrue = tlPerformBBoxTruth(trueBBox, positiveBBox, overlapType, overlapMin)
+
+  switch overlapType
+  case 'IoU'
+    isTrue = (overlapMin <= tlBBoxOverlap(trueBBox, positiveBBox, 'union'));
+    
+  end
+
+end

@@ -1,0 +1,29 @@
+function ss = scalarSummariesPlotter(iFig, idOut, inPath, srcIds, labels)
+
+
+for i = 1:length(srcIds)
+   
+    load([inPath srcIds{i}],'curve');
+    
+    % compute AveP given p(r) := curve.{X,Y}
+    % http://en.wikipedia.org/wiki/Information_retrieval#Average_precision
+    
+    Prec = curve.Y;
+    Rec = curve.X;
+    
+    k = 11;
+    R = [0:1/(K-1):1];
+    
+    for 
+    
+    P_interp = max(Prec(Rec > R(3)))
+    
+    P_interp = max(Prec);
+    
+    auc = sum(P_interp) / k;
+    
+    ss(i) = auc;
+end
+
+%legend(names)
+%plot(iFig,ss);

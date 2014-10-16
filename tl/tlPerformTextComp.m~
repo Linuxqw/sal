@@ -1,0 +1,26 @@
+function tlPerformTextComp(ids)
+
+M=length(ids);
+for j=1:M
+
+    load(['postprocess/' ids{j}],'pr');
+    PR{j}=pr;
+    N=length(pr);
+end
+
+for i=1:N
+    fprintf('\nIMAGE %d\n',i);
+    for j=1:M
+        Idet=find(PR{j}(i).hits;
+        str='';
+        for k=Idet
+            str=sprintf('%s  %d-%
+        end
+        
+        fprintf(' method %d: %s\n',j,str);
+        disp(PR{j}(i).iGt(PR{j}(i).hits)')
+        disp(PR{j}(i).iou(PR{j}(i).hits)')
+    end
+end
+
+end
